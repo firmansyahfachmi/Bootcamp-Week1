@@ -1,41 +1,51 @@
 let object = [
-    {
+    {   
         id : 1,
-        name : "Ron"
+        schoolName : "SMKN 4 Malang",
+        yearIn: 2016,
+        yearOut: 2019
     },
-    {
-        id : 2,
-        name : "Ren"
+    {   
+        id: 2,
+        schoolName: "Universitas Airlangga",
+        yearIn: 2014,
+        yearOut: 2019
     },
-    {
-        id : 3,
-        name : "Rin"
+    {   
+        id: 3,
+        schoolName: "Universitas Gajah Mada",
+        yearIn: 2013,
+        yearOut: 2017
     }
 ]
     //ShowAll Function
     function showAll(item){
-        let allObject = [item.id, item.name].join(" ");
+        let allObject = [item.id,item.schoolName, item.yearIn,item.yearOut].join(" ");
         return allObject;
     }
     console.log(object.map(showAll));
 
     //Add Function
-    function Add(A_id, A_name){
+    function Add(A_id, A_school, A_in, A_out){
         let data = [
             {  
                 id : A_id,
-                name : A_name
+                schoolName : A_school,
+                yearIn : A_in,
+                yearOut : A_out
             }
         ]
         object.push(data[0]);
         console.log(object.map(showAll));
     }
 
-    function Change(V_id, V_name) {
+    function Change(C_id, C_school, C_in, C_out) {
         for (let i in object) {
-            if (object[i].id == V_id) {
-                object[i].id = V_id;
-                object[i].name = V_name;
+            if (object[i].id == C_id) {
+                object[i].id = C_id;
+                object[i].schoolName = C_school;
+                object[i].yearIn = C_in;
+                object[i].yearOut= C_out;
                 break;
             }
         }
@@ -54,8 +64,8 @@ let object = [
     }
 
     //Call Function
-    Add(4, "Len");
-    Change(1, "Raned");
+    Add(4, "Universitas Brawijaya", 2013, 2017);
+    Change(1, "Universitas Trisakti", 2014, 2018);
     Delete(1);
     
 
