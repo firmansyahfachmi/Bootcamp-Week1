@@ -31,5 +31,5 @@ let person2 = [{
 
 
 
-let newPerson = {...person,...person2};
+let newPerson = {...person2};
 console.log(newPerson);

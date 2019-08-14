@@ -24,6 +24,7 @@ let object = [
         return allObject;
     }
     console.log(object.map(showAll));
+    console.log();
 
     //Add Function
     function Add(A_id, A_school, A_in, A_out){
@@ -37,6 +38,7 @@ let object = [
         ]
         object.push(data[0]);
         console.log(object.map(showAll));
+        console.log();
     }
 
     function Change(C_id, C_school, C_in, C_out) {
@@ -50,6 +52,7 @@ let object = [
             }
         }
         console.log(object.map(showAll));
+        console.log();
     }
 
     //Delete Function
@@ -61,6 +64,7 @@ let object = [
         }
         
         console.log(object.map(showAll));
+
     }
 
     //Call Function

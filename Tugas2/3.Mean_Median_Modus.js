@@ -18,9 +18,8 @@
 function Median(arr){
      arr.sort(function (a, b) {
             return a - b;
-        });
+    });
 
-    //let median = (arr[(arr.length - 1) ] + arr[arr.length >> 1]) / 2;
     let median = arr[Math.floor(arr.length / 2)];
 
     console.log("Median : " + median);
@@ -32,18 +31,20 @@ function Mode(arr) {
     let res = [];
     let total = [];
     
+    //Initalize Number
     for(let i = 0; i < arr.length; i++){ 
         let temp = 0;
         let number = arr[i];
         
-
-        for (let j = 0; j < arr.length; j++) {
-            if (arr[j] === arr[i]) {
+        // Counting Temp
+        for(let j = 0; j < arr.length; j++) {
+            if (arr[j] === arr[i]){
                 temp += 1; 
             }
             
         }
 
+        // Push
         if (res.indexOf(arr[i]) == -1) {
             res.push(number);
             total.push(temp);
@@ -52,11 +53,10 @@ function Mode(arr) {
     
     }
 
+    //Get Highest Number
     let result = Math.max(...total);
 
-    //let result = [...new Set(res)];
-    //let resTotal = [...new Set(total)];
-
+    //Initialize Index Number
     for(let n = 0; n < total.length; n++){
         if(total[n] == result){
             modes.push(res[n]);
@@ -69,5 +69,5 @@ function Mode(arr) {
 
 Mean([2, 2, 8, 8, 8, 3]);
 Median([2, 2, 8, 8, 8, 3]);
-Mode([2, 2, 2, 8, 8, 8, 3]);
+Mode([2, 2, 8, 8, 8, 3]);
 

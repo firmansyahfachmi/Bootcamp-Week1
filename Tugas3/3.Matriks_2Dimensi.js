@@ -25,6 +25,3 @@ transposeArray([
     [4, 5, 6],
     [7, 8, 9]
 ]);
-
-//arr[0].map((col, i) => 
-//console.log(arr.map(col, i));
