@@ -1,4 +1,5 @@
-let person = [{
+
+let olddata= [{
         name: "Tatas",
         company: "Arkademy",
         job: "Trainer",
@@ -13,7 +14,7 @@ let person = [{
         city: "Jakarta"
     }
 ];
-let person2 = [{
+let newdata = [{
         name: "Tatas",
         company: "Arkademy",
         job: "Trainer",
@@ -31,5 +32,5 @@ let person2 = [{
 
 
 
-let newPerson = {...person,...person2};
-console.log(newPerson);
+let result = {...olddata,...newdata};
+console.log(result);

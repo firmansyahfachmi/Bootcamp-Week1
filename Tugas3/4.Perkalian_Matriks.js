@@ -21,8 +21,9 @@ function countMatrix(a, b){
                 for(let n = 0; n < a[i].length; n++){
 
                     temp += a[i][n] * b[n][j];
-                
+
                 }
+                
                 row.push(temp);
 
             }
