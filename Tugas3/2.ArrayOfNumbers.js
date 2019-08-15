@@ -1,18 +1,25 @@
 function count(arr){
     let total = 0;
-    for (let i = 0; i < arr.length; i++) {
-        total += parseInt(arr[i]);
-    }
+    const loop = arr.map(num =>{        
+        total += parseInt(num);
+    })
+    // for (let i = 0; i < arr.length; i++) {
+    //     total += parseInt(arr[i]);
+    // }
     let breaked = total.toString().split("");
     changeInt(breaked);
 
 }
 
 function changeInt(data) {
-    for (let i = 0; i < data.length; i++) {
-        data[i] = parseInt(data[i]);
-    }
-    check(data);
+    const loop2 = data.map(num => {
+        num = parseInt(num);
+        return num;
+    })
+    // for (let i = 0; i < data.length; i++) {
+    //     data[i] = parseInt(data[i]);
+    // }
+    check(loop2);
     
 }
 
